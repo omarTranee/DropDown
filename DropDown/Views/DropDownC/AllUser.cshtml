@@ -1,0 +1,27 @@
+﻿@model IEnumerable<DropDown.Models.UserProfile>
+
+@using GridMvc.Html
+
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")" type="text/javascript"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="@Url.Content("~/Content/Css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "AllUser";
+}
+
+<h2>AllUser</h2>
+
+
+
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(foo => foo.UserName).Titled("User Name").SetWidth(110).Filterable(true);
+    columns.Add(foo => foo.Email).Sortable(true);
+    columns.Add(foo => foo.Tel).Sortable(true);
+    columns.Add(foo => foo.Address).Sortable(true);
+}).WithPaging(4)
