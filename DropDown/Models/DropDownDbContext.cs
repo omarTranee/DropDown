@@ -12,5 +12,7 @@ namespace DropDown.Models
         public DbSet<City> Cities { get; set; }
         public DbSet<State> States { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<Clinic> Clinics { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

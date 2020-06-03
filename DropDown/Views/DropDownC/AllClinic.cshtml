@@ -1,0 +1,19 @@
+﻿@model IEnumerable<DropDown.Models.Clinic>
+
+@{
+    ViewBag.Title = "AllClinic";
+}
+
+<h2>AllClinic</h2>
+
+
+
+@foreach (var item in Model) {
+    <div class="form-control">
+        @Html.DisplayNameFor(model => model.Name)
+        @Html.DisplayFor(modelItem => item.Name)
+    </div>
+}
+
+
+

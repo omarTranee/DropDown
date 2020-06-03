@@ -41,5 +41,22 @@ namespace DropDown.Controllers
             DropDownDbContext db = new DropDownDbContext();
             return View(db.UserProfiles.ToList());
         }
+
+        public ActionResult AllClinic()
+        { 
+            DropDownDbContext db = new DropDownDbContext();
+            return View(db.Clinics.ToList());
+        }
+
+       /* public ActionResult GetClinic(int ID , int CatId)
+        {
+
+            DropDownDbContext db = new DropDownDbContext();
+
+            var clinic = db.Clinics.Where(c => c.State.state_id == ID).ToList();
+            var ClinicByCat = clinic.Where(c => c.Category.Id == CatId).ToList();
+
+            return View("s");
+        }*/
     }
 }

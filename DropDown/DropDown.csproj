@@ -150,12 +150,47 @@
     <Compile Include="Migrations\202006010349003_AddEmailInUserProfile.designer.cs">
       <DependentUpon>202006010349003_AddEmailInUserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006030949572_AddClinicTableAndRelateItWithCityTable.cs" />
+    <Compile Include="Migrations\202006030949572_AddClinicTableAndRelateItWithCityTable.designer.cs">
+      <DependentUpon>202006030949572_AddClinicTableAndRelateItWithCityTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030956315_AddCateoryTableAndRelateItWithClinic.cs" />
+    <Compile Include="Migrations\202006030956315_AddCateoryTableAndRelateItWithClinic.designer.cs">
+      <DependentUpon>202006030956315_AddCateoryTableAndRelateItWithClinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031113070_AddTableClinicAndCategoryTable.cs" />
+    <Compile Include="Migrations\202006031113070_AddTableClinicAndCategoryTable.designer.cs">
+      <DependentUpon>202006031113070_AddTableClinicAndCategoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031114513_AddDAtaToCategoryTable.cs" />
+    <Compile Include="Migrations\202006031114513_AddDAtaToCategoryTable.designer.cs">
+      <DependentUpon>202006031114513_AddDAtaToCategoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031147501_removecolumn.cs" />
+    <Compile Include="Migrations\202006031147501_removecolumn.designer.cs">
+      <DependentUpon>202006031147501_removecolumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031157158_ModifyRelations.cs" />
+    <Compile Include="Migrations\202006031157158_ModifyRelations.designer.cs">
+      <DependentUpon>202006031157158_ModifyRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031159063_Modifyagain.cs" />
+    <Compile Include="Migrations\202006031159063_Modifyagain.designer.cs">
+      <DependentUpon>202006031159063_Modifyagain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031201572_Modifyagai.cs" />
+    <Compile Include="Migrations\202006031201572_Modifyagai.designer.cs">
+      <DependentUpon>202006031201572_Modifyagai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Clinic.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\DropDownDbContext.cs" />
     <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\UserProfile.cs" />
+    <Compile Include="Models\VMClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +245,7 @@
     <Content Include="Views\DropDownC\Index.cshtml" />
     <Content Include="Views\DropDownC\AllUser.cshtml" />
     <Content Include="Views\Shared\_AjaxGridPager.cshtml" />
+    <Content Include="Views\DropDownC\AllClinic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,6 +272,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006010349003_AddEmailInUserProfile.resx">
       <DependentUpon>202006010349003_AddEmailInUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030949572_AddClinicTableAndRelateItWithCityTable.resx">
+      <DependentUpon>202006030949572_AddClinicTableAndRelateItWithCityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030956315_AddCateoryTableAndRelateItWithClinic.resx">
+      <DependentUpon>202006030956315_AddCateoryTableAndRelateItWithClinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031113070_AddTableClinicAndCategoryTable.resx">
+      <DependentUpon>202006031113070_AddTableClinicAndCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031114513_AddDAtaToCategoryTable.resx">
+      <DependentUpon>202006031114513_AddDAtaToCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031147501_removecolumn.resx">
+      <DependentUpon>202006031147501_removecolumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031157158_ModifyRelations.resx">
+      <DependentUpon>202006031157158_ModifyRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031159063_Modifyagain.resx">
+      <DependentUpon>202006031159063_Modifyagain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031201572_Modifyagai.resx">
+      <DependentUpon>202006031201572_Modifyagai.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
