@@ -7,24 +7,13 @@
 }
 <script>
     $(function () {
-        $("#ContID").change(function () {
-            $.get("/DropDownC/GetStatesByID",
-                { ID: $("#ContID").val() },
-                function (data) {
-                    $("#St").empty();
-                    $("#city").empty();
-                    $.each(data,
-                        function (index, row) {
-                            $("#St").append("<option value='" + row.state_id + "'>" + row.name + "</option>");
-                        });
-                });
-        });
+       
 
         $("#St").change(function () {
             $.get("/DropDownC/GetCityByID",
                 { ID: $("#St").val() },
                 function (data) {
-                    $("#city").empty();
+                    //$("#city").empty();
                     $.each(data,
                         function (index, row) {
                             $("#city").append(`<option value="${row.id}">${row.name}</option>`);
@@ -37,29 +26,23 @@
 <h2>Index</h2>
 @using (Html.BeginForm("GetClinic","DropDownC",FormMethod.Post))
 {
-    
-    @*@Html.DropDownListFor(p=>p.id, ViewBag.CountryName as SelectList
-        , "Select Your Country", new { id = "ContID", name="countreyId", @class = "form-control"  })*@
-    
-<select class="form-control" id="ContID" name="counteryId">
+
+    <select class="form-control" id="St" name="stateId">
     <option value="-1">Choose Country </option>
-    @foreach (var count in (List<Country>)ViewBag.CountryName)
+    @foreach (var count in (List<State>)ViewBag.StateName)
     {
         
-        <option value="@count.id">@count.name</option>
+        <option value="@count.state_id">@count.name</option>
 
     }
 </select>
 
 
-    <select id="St" class="form-control" name="stateId">
-    </select>
     <select id="city" class="form-control" name="cityId">
+        <option value="-1">Choose area</option>
     </select>
 
-    @*@Html.DropDownList("Category", ViewBag.CategoryName as SelectList
-        , "Select Your Category", new { id = "CaID", @class = "form-control" , name="CaID" })*@
-    <select class="form-control"  id="CaID" name="catid"> 
+    <select class="form-control"  id="CaID" name="categoryid"> 
         <option value="-1">Choose Category </option>
         @foreach (var count  in  (List<Category>) ViewBag.CategoryName)
         {
@@ -68,7 +51,6 @@
         }
     </select>
 
-    @*@Html.ActionLink("Submit","GetClinic","DropDownC",new{@id="St",CategoryId="CaID"})*@
     <div class="form-group">
         <input type="submit" class="btn btn-success" value="Get Data"/>
     </div>

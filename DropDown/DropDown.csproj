@@ -182,6 +182,10 @@
     <Compile Include="Migrations\202006031201572_Modifyagai.designer.cs">
       <DependentUpon>202006031201572_Modifyagai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006051114439_RemoveClinicFromStateToCityTable.cs" />
+    <Compile Include="Migrations\202006051114439_RemoveClinicFromStateToCityTable.designer.cs">
+      <DependentUpon>202006051114439_RemoveClinicFromStateToCityTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Clinic.cs" />
@@ -246,7 +250,6 @@
     <Content Include="Views\DropDownC\AllUser.cshtml" />
     <Content Include="Views\Shared\_AjaxGridPager.cshtml" />
     <Content Include="Views\DropDownC\AllClinic.cshtml" />
-    <Content Include="Views\DropDownC\DropAction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -297,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006031201572_Modifyagai.resx">
       <DependentUpon>202006031201572_Modifyagai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006051114439_RemoveClinicFromStateToCityTable.resx">
+      <DependentUpon>202006051114439_RemoveClinicFromStateToCityTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

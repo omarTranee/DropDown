@@ -19,8 +19,6 @@ namespace DropDown.Models
         public Country Country { get; set; }
 
         public IEnumerable<City> Cities { get; set; }
-        public int ClinicId { get; set; }
-        public IEnumerable<Clinic> Clinics { get; set; }
-
+  
     }
 }

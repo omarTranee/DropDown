@@ -13,16 +13,12 @@ namespace DropDown.Controllers
         // GET: DropDownC
         public ActionResult Index()
         {
-            ViewBag.CountryName = db.Countries.ToList();
+            ViewBag.StateName = db.States.Where(c=>c.country_id==64).ToList();
             ViewBag.CategoryName = db.Categories.ToList();
             return View();
         }
 
-        public JsonResult GetStatesByID(int ID)
-        {
-
-            return Json(db.States.Where(s => s.country_id == ID), JsonRequestBehavior.AllowGet);
-        }
+       
 
         public JsonResult GetCityByID(int ID)
         {
@@ -43,20 +39,12 @@ namespace DropDown.Controllers
 
         #endregion
         [HttpPost]
-        public JsonResult GetClinic(int stateId , int cityId ,int counteryId = -1, int catid = -1)
+        public ActionResult GetClinic(int stateId=-1, int cityId =-1, int categoryid=-1)
         {
 
-        
+            //return $" - City  : {cityId} co- State : {stateId}  -Categoery : {categoryid}";
+            return View("AllClinic",db.Clinics.Where(c => c.Category.Id == categoryid && c.City.id == cityId).ToList());
 
-            var city = db.Clinics.Where(c => c.Category.Id ==catid && c.State.state_id ==stateId).ToList();
-            //var ClinicByCat = city.Where(c => c.Category.Id == CategoryId).ToList();
-
-            ////return View("AllClinic",ClinicByCat);
-            /// countris states 
-            /// 
-
-            //return $"Countrey  : {counteryId} - City  : {cityId} co- State : {stateId}  -Categoery : {catid}";
-            return Json(db.Clinics.Where(c => c.Category.Id == catid && c.State.state_id == stateId).ToList());
         }
     }
 }

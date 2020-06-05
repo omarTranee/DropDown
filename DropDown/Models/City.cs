@@ -13,6 +13,7 @@ namespace DropDown.Models
         public int state_id { get; set; }
 
         public State state { get; set; }
+        public IEnumerable<Clinic> Clinics { get; set; }
 
 
     }
